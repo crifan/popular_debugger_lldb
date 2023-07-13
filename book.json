@@ -1,0 +1,127 @@
+{
+  "title": "主流调试器：LLDB",
+  "description": "介绍主流的调试器LLDB。先是LLDB概览；再详细介绍LLDB的命令，包括LLDB的命令概览和LLDB的各个命令；LLDB命令概览包括cheat sheet和help语法；LLDB常用命令包括image、register、expression，尤其是其中的p和po、memory、disassemble、thread、frame、breakpoint、watchpoint、以及调试控制相关的命令，包括run、continue、next和nexti、step和stepi、jump、finish、exit等，且都给出help语法和用法举例；然后再整理出相关心得，包括命令的缩写、Xcode中的lldb、iOS逆向、LLVM等等。最后给出相关的文档和资料。",
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "repo": "popular_debugger_lldb",
+          "user": "crifan",
+          "type": "star",
+          "count": true,
+          "size": "small"
+        },
+        {
+          "user": "crifan",
+          "type": "follow",
+          "width": "120",
+          "count": false,
+          "size": "small"
+        }
+      ]
+    },
+    "sitemap-general": {
+      "prefix": "https://book.crifan.org/books/popular_debugger_lldb/website/"
+    },
+    "toolbar-button": {
+      "url": "https://book.crifan.org/books/popular_debugger_lldb/pdf/popular_debugger_lldb.pdf",
+      "icon": "fa-file-pdf-o",
+      "label": "下载PDF"
+    },
+    "callouts": {
+      "showTypeInHeader": false
+    },
+    "theme-default": {
+      "showLevel": true
+    },
+    "disqus": {
+      "shortName": "crifan"
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-atom-dark.css"
+      ]
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": true,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "qq": true,
+      "qzone": false,
+      "stumbleupon": false,
+      "twitter": true,
+      "viber": false,
+      "vk": false,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "line",
+        "linkedin",
+        "messenger",
+        "pocket",
+        "qq",
+        "qzone",
+        "stumbleupon",
+        "twitter",
+        "viber",
+        "vk",
+        "weibo",
+        "whatsapp"
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布",
+      "modify_label": "最后更新：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "donate": {
+      "wechat": "https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg",
+      "alipay": "https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg",
+      "title": "",
+      "button": "打赏",
+      "alipayText": "支付宝打赏给Crifan",
+      "wechatText": "微信打赏给Crifan"
+    }
+  },
+  "author": "Crifan Li <admin@crifan.com>",
+  "language": "zh-hans",
+  "root": "./src",
+  "links": {
+    "sidebar": {
+      "主页": "http://www.crifan.org"
+    }
+  },
+  "plugins": [
+    "theme-comscore",
+    "anchors",
+    "expandable-menu",
+    "-lunr",
+    "-search",
+    "search-plus",
+    "disqus",
+    "-highlight",
+    "prism",
+    "prism-themes",
+    "github-buttons",
+    "-splitter",
+    "splitter-nosessionbutcookie",
+    "-sharing",
+    "sharing-plus",
+    "tbfed-pagefooter",
+    "donate",
+    "sitemap-general",
+    "copy-code-button",
+    "callouts",
+    "toolbar-button"
+  ]
+}
