@@ -2,6 +2,7 @@
 
 * [前言](README.md)
 * [LLDB概览](lldb_overview/README.md)
+* [如何用LLDB调试程序](lldb_debug/README.md)
 * [LLDB命令](lldb_commands/README.md)
   * [命令概览](lldb_commands/command_all/README.md)
     * [lldb的cheat sheet](lldb_commands/command_all/cheat_sheet.md)
