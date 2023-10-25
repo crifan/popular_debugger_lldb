@@ -191,9 +191,25 @@ br l
 其他常用缩写：
 
 * `expression` -> `e`、 `exp`
+* `breakpoint` = `br` == 特殊写法: `b`
+  * `breakpoint set` -> `br s`
+  * `breakpoint list` -> `br l`
+  * 举例
+    * `breakpoint delete 1` -> `br del 1`
+    * `breakpoint disable 1` -> `br dis 1`
+    * `breakpoint enable 1` -> `br en 1`
+    * `breakpoint set --name main` -> `br s -n main` -> `b main`
+    * `breakpoint set --name foo --condition '(int)strcmp(y,"hello") == 0'`
+      * -> `br s -n foo -c '(int)strcmp(y,"hello") == 0'`
 * `disassemble` -> `dis`
+  * 举例
+    * `disassemble -s 0x1167b1974` -> `dis -s 0x1167b1974`
 * `register` -> `reg`
   * `register read` -> `reg r`
+    * 举例
+      * `register r x0` -> `reg r x0` 
 * `image` -> `im`
   * `image lookup` = `im loo`
+    * 举例
+      * `image lookup --address 0x1ec4` -> `im loo -a 0x1ec4`
 * `memory` -> `mem`

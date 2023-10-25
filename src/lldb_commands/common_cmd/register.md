@@ -2,7 +2,8 @@
 
 TODO：
 
-【记录】lldb命令使用心得：register
+* 【记录】lldb命令使用心得：register
+* 【记录】lldb命令使用心得：register read
 
 ---
 

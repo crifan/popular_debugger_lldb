@@ -1,26 +1,4 @@
-# Xcode中lldb
-
-TODO：
-
-* 【整理】Xcode的lldb调试心得：F7单步进入无名的汇编代码
-* 【未解决】XCode和lldb如何根据函数地址加断点
-* 【已解决】XCode和lldb调试常见用法和调试心得
-* 【已解决】XCode的lldb中如何调试找到当前函数_dyld_get_image_name的返回值
-* 【已解决】Xcode调试：lldb中临时变量
-
----
-
-此处整理`Xcode`中的`lldb`的一些心得：
-
-## 支持自动补全
-
-`Xcode`中`lldb`中支持自动补全：
-
-![lldb_autocomplete_reg_1](../assets/img/lldb_autocomplete_reg_1.png)
-
-![lldb_autocomplete_reg_2](../assets/img/lldb_autocomplete_reg_2.png)
-
-## 查看函数调用堆栈
+# 查看函数调用堆栈
 
 `lldb`和`XCode`中查看`函数调用堆栈`=`backtrace`：
 
@@ -28,15 +6,15 @@ XCode调试期间，想要查看：函数调用堆栈
 
 至少有2种方法：
 
-### XCode的UI界面中
+## XCode的UI界面中
 
 `XCode`中，`Command`+`鼠标单击`：
 
-![xcode_command_click_icon](../assets/img/xcode_command_click_icon.png)
+![xcode_command_click_icon](../../assets/img/xcode_command_click_icon.png)
 
 即可看到全部的函数调用堆栈：
 
-![xcode_see_all_func_call](../assets/img/xcode_see_all_func_call.png)
+![xcode_see_all_func_call](../../assets/img/xcode_see_all_func_call.png)
 
 注：
 
@@ -44,9 +22,9 @@ XCode调试期间，想要查看：函数调用堆栈
 
 且和`Debug Navigator`中的线程下面的 函数调用堆栈 简略信息 是一致的：
 
-![xcode_only_click_abbr_info](../assets/img/xcode_only_click_abbr_info.png)
+![xcode_only_click_abbr_info](../../assets/img/xcode_only_click_abbr_info.png)
 
-### lldb命令bt
+## lldb命令bt
 
 * `bt` = `thread backtrace`
   * =`th b`
@@ -85,5 +63,4 @@ XCode调试期间，想要查看：函数调用堆栈
     frame #25: 0x00000001028b9038 dyld`_dyld_start + 56
 ```
 
-![lldb_bt_show_call](../assets/img/lldb_bt_show_call.png)
-
+![lldb_bt_show_call](../../assets/img/lldb_bt_show_call.png)
