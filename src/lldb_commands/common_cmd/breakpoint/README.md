@@ -1,17 +1,7 @@
 # breakpoint
 
-TODO：
-
-* 【记录】lldb命令使用心得：breakpoint
-* 【已解决】Xcode中lldb中b list不是breakpoint list
-* 【未解决】Xcode中无法给下一行将要运行的汇编指令加断点
-* 【已解决】XCode中如何给符号断点加上判断条件
-* 【未解决】XCode和lldb如何根据函数地址加断点
-
----
-
 * 概述
-  * 加断点
+  * 用`b`或`breakpoint`加断点
     * 添加方式
       * 通过地址
         ```bash
@@ -59,5 +49,7 @@ TODO：
           br s -n "___lldb_unnamed_symbol972" -s libMobileGestalt.dylib
           br s -n "___lldb_unnamed_symbol972" --shlib libMobileGestalt.dylib
           ```
+    * 语法
+      * [breakpoint的help语法 · iOS逆向之动态调试：断点](https://book.crifan.org/books/ios_re_debug_breakpoint/website/cmd_lldb/br_help.html)
 * 详解
   * [iOS逆向之动态调试：断点](https://book.crifan.org/books/ios_re_debug_breakpoint/website/)
