@@ -73,6 +73,8 @@
 * 【未解决】Xcode中如何给iOS的Swift函数加断点：AppleStoreCore的User的initialize
 * 【已解决】iOS逆向Apple账号：哪个类实现了函数didReceiveData等去获取response的data
 * 【未解决】Xcode的lldb中动态调试objc_msgSend第一个参数self是哪个类
+* 【已解决】iOS逆向：lldb中image list报错：error the target has no matching modules
+* 【已解决】iOS逆向：lldb中加断点报错：warning failed to set breakpoint site at
 * 
 * [lldb调试器知多少 - 掘金 (juejin.cn)](https://juejin.cn/post/6844904048743677959)
 * [LLDB调试器使用简介 | 南峰子的技术博客 (southpeak.github.io)](http://southpeak.github.io/2015/01/25/tool-lldb/)

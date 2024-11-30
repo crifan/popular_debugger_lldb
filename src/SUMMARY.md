@@ -30,6 +30,8 @@
     * [thread](lldb_commands/common_cmd/thread.md)
     * [frame](lldb_commands/common_cmd/frame.md)
     * [breakpoint](lldb_commands/common_cmd/breakpoint/README.md)
+      * [举例](lldb_commands/common_cmd/breakpoint/examples.md)
+      * [心得](lldb_commands/common_cmd/breakpoint/summary.md)
       * [help语法](lldb_commands/common_cmd/breakpoint/help.md)
     * [watchpoint](lldb_commands/common_cmd/watchpoint/README.md)
       * [help语法](lldb_commands/common_cmd/watchpoint/help.md)
