@@ -75,6 +75,7 @@
 * 【未解决】Xcode的lldb中动态调试objc_msgSend第一个参数self是哪个类
 * 【已解决】iOS逆向：lldb中image list报错：error the target has no matching modules
 * 【已解决】iOS逆向：lldb中加断点报错：warning failed to set breakpoint site at
+* 【已解决】iOS逆向lldb调试dis报错：error Not disassembling the current function because it is very large
 * 
 * [lldb调试器知多少 - 掘金 (juejin.cn)](https://juejin.cn/post/6844904048743677959)
 * [LLDB调试器使用简介 | 南峰子的技术博客 (southpeak.github.io)](http://southpeak.github.io/2015/01/25/tool-lldb/)

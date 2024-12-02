@@ -1,24 +1,6 @@
-# disassemble
+# 举例
 
-TODO：
-
-【记录】lldb命令使用心得：disassemble
-
----
-
-* `disassemble` == `dis` == `di`
-  ```bash
-    di        -- Disassemble specified instructions in the current target. 
-                Defaults to the current function for the current thread and
-                stack frame.
-    dis       -- Disassemble specified instructions in the current target. 
-                Defaults to the current function for the current thread and
-                stack frame.
-  ```
-
-## disassemble举例
-
-### 官网的例子
+## 官网的例子
 
 [GDB to LLDB command map — The LLDB Debugger (llvm.org)](https://lldb.llvm.org/use/map.html)
 
@@ -60,26 +42,7 @@ TODO：
   (lldb) di -l
   ```
 
-### 某次测试的一些命令
-
-* 某次测试的一些命令
-  * 如果当前已处于某个函数，则：
-    ```bash
-    dis -f == dis = dis -n FunctionName
-    ```
-  * 其他常见用法：
-    ```bash
-    disassemble == dis = di
-    dis -n "-[AAUISignInViewController _nextButtonSelected:]"
-    dis -f
-    dis --start-address 0x1b30cb978 --end-address 0x1b30cb990
-    dis --start-address 0x1b30cb978 --count 10
-    dis --frame --mixed
-    dis --frame --bytes
-    dis --line
-    ```
-
-#### 当前frame = 当前函数的 全部汇编代码
+## 当前frame = 当前函数的 全部汇编代码
 
 ```bash
 dis -f
@@ -103,7 +66,7 @@ dis -f
       0x1b30cb9a8 <+48>: b      0x1b2c70578
   ```
 
-#### 指定函数
+## 指定函数
 
 ```bash
 disassemble -n "-[AAUISignInViewController _nextButtonSelected:]"
@@ -126,9 +89,9 @@ disassemble -n "-[AAUISignInViewController _nextButtonSelected:]"
       0x1b30cb9a4 <+44>: ldp    x20, x19, [sp], #0x20
       0x1b30cb9a8 <+48>: b      0x1b2c70578
   ```
-  * ![dis_name_AAUISignInViewController_nextButtonSelected](../../assets/img/dis_name_AAUISignInViewController_nextButtonSelected.png)
+  * ![dis_name_AAUISignInViewController_nextButtonSelected](../../../assets/img/dis_name_AAUISignInViewController_nextButtonSelected.png)
 
-#### 指定地址范围
+## 指定地址范围
 
 ```bash
 disassemble --start-address 0x1b30cb978 --end-address 0x1b30cb990
@@ -169,7 +132,7 @@ disassemble --start-address 0x1b30cb978 --count 10
       0x1b30cb99c <+36>: mov    x0, x19
   ```
 
-#### 显示opcode
+## 显示opcode
 
 ```bash
 disassemble --frame --bytes
@@ -195,10 +158,7 @@ disassemble --frame --bytes
       0x1b30cb9a8 <+48>: 0x17ee92f4   b      0x1b2c70578
   ```
 
-
-### 其他例子
-
-#### 显示某个地址的反汇编
+## 显示某个地址的反汇编
 
 ```bash
 disassemble -s 0x00000001091694a4
@@ -227,7 +187,7 @@ disassemble -s 0x00000001091694a4
       0x1091694c0 <+4>: br     x2
   ```
 
-#### 指定显示的行数
+## 指定显示的行数
 
 * 显示从 函数最开始 算起的 20行代码
   ```bash
@@ -299,75 +259,4 @@ akd`___lldb_unnamed_symbol2575$$akd:
 (lldb)
 ```
 
-![lldb_dis_count_pc](../../assets/img/lldb_dis_count_pc.png)
-
-## disassemble语法
-
-```bash
-(lldb) help disassemble
-Disassemble specified instructions in the current target.  Defaults to the
-current function for the current thread and stack frame.
-
-Syntax: disassemble [<cmd-options>]
-
-Command Options Usage:
-  disassemble [-bmr] -s <address-expression> [-A <arch>] [-C <num-lines>] [-e <address-expression>] [-F <disassembly-flavor>] [-P <plugin>]
-  disassemble [-bmr] -s <address-expression> [-A <arch>] [-C <num-lines>] [-c <num-lines>] [-F <disassembly-flavor>] [-P <plugin>]
-  disassemble [-bmr] [-A <arch>] [-C <num-lines>] [-c <num-lines>] [-F <disassembly-flavor>] [-n <function-name>] [-P <plugin>]
-  disassemble [-bfmr] [-A <arch>] [-C <num-lines>] [-c <num-lines>] [-F <disassembly-flavor>] [-P <plugin>]
-  disassemble [-bmpr] [-A <arch>] [-C <num-lines>] [-c <num-lines>] [-F <disassembly-flavor>] [-P <plugin>]
-  disassemble [-blmr] [-A <arch>] [-C <num-lines>] [-F <disassembly-flavor>] [-P <plugin>]
-  disassemble [-bmr] [-a <address-expression>] [-A <arch>] [-C <num-lines>] [-c <num-lines>] [-F <disassembly-flavor>] [-P <plugin>]
-
-       --force
-            Force dissasembly of large functions.
-
-       -A <arch> ( --arch <arch> )
-            Specify the architecture to use from cross disassembly.
-
-       -C <num-lines> ( --context <num-lines> )
-            Number of context lines of source to show.
-
-       -F <disassembly-flavor> ( --flavor <disassembly-flavor> )
-            Name of the disassembly flavor you want to use. Currently the only
-            valid options are default, and for Intel architectures, att and
-            intel.
-
-       -P <plugin> ( --plugin <plugin> )
-            Name of the disassembler plugin you want to use.
-
-       -a <address-expression> ( --address <address-expression> )
-            Disassemble function containing this address.
-
-       -b ( --bytes )
-            Show opcode bytes when disassembling.
-
-       -c <num-lines> ( --count <num-lines> )
-            Number of instructions to display.
-
-       -e <address-expression> ( --end-address <address-expression> )
-            Address at which to end disassembling.
-
-       -f ( --frame )
-            Disassemble from the start of the current frame's function.
-
-       -l ( --line )
-            Disassemble the current frame's current source line instructions if
-            there is debug line table information, else disassemble around the
-            pc.
-
-       -m ( --mixed )
-            Enable mixed source and assembly display.
-
-       -n <function-name> ( --name <function-name> )
-            Disassemble entire contents of the given function name.
-
-       -p ( --pc )
-            Disassemble around the current pc.
-
-       -r ( --raw )
-            Print raw disassembly with no symbol information.
-
-       -s <address-expression> ( --start-address <address-expression> )
-            Address at which to start disassembling.
-```
+![lldb_dis_count_pc](../../../assets/img/lldb_dis_count_pc.png)
